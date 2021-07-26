@@ -1,3 +1,5 @@
+![Imagem1](https://github.com/cybermaique/ReactJS_Netflix_Clone_UI/blob/master/imgs/1.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
