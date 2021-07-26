@@ -1,0 +1,70 @@
+.movieRow{
+    margin-bottom: 30px; /*Margém entre um item e outro (Originais, Recomendados, etc)*/
+}
+
+.movieRow h2 { /*CSS do título h2*/
+    margin: 0px 0px 0px 30px; 
+}
+
+.movieRow--listarea{ /*Tudo que passar da tela na horizontal será cortado.*/
+    overflow-x: hidden; /*Tudo que passar da tela no eixo x (horizontal) será cortado.*/
+    padding-left: 30px; /*Alinhar bloco de série a esquerda*/
+}
+
+.movieRow--list{
+    transition: all ease 0.5s;
+}
+
+.movieRow--item{
+    display: inline-block; /*Um item ao lado do outro*/
+    width: 150px; /*cada série ocupará 150px*/
+    cursor: pointer;
+}
+
+.movieRow--item img{
+    width: 100%;
+    transform: scale(0.9); /*Imagem continua do tamanho total, só modificamos a escala no CSS. Pq não usar margin? Pq usando o scale, iremos adicionar um efeito ao passar o mouse por cima do bloco do série.*/
+    transition: all ease 0.2s; /*Aplicar o tipo ease de 0.2s para todas transições da imagem. Ease = fade*/
+    cursor: pointer; /*Aparecer cursor ao posicionar mouse em cima da imagem*/
+}
+
+.movieRow--item img:hover{
+    transform: scale(1); /*Ao colocar o mouse em cima, irá aumentar o tamanho da imagem de 0.9 para 1*/
+}
+
+.movieRow--left,
+.movieRow--right{
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.movieRow--left{
+    left: 0;
+}
+
+.movieRow--right{
+    right: 0;
+}
+
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right{
+    opacity: 1; /*aparecer setas somente se colocar o cursor em cima da lista de séries*/
+}
+
+/*Configurando responsividade da Lista de Filmes*/
+@media (max-width: 760px){ 
+    .movieRow--left,
+    .movieRow--right {
+    opacity: 1; /*se a resolução for até 760px, sempre exibir seta left e right.*/
+    }
+}
