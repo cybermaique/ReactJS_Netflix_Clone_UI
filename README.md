@@ -1,5 +1,3 @@
-# Netflix Clone UI - Project Completed by Maique Doglas Moraes da Silva:
-
 ![Imagem1](https://github.com/cybermaique/ReactJS_Netflix_Clone_UI/blob/master/imgs/5.png)
 
 ![Imagem1](https://github.com/cybermaique/ReactJS_Netflix_Clone_UI/blob/master/imgs/6.png)
